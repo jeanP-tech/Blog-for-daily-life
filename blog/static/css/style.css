@@ -55,6 +55,43 @@ body{
     display: block;
 }
 
+.container{
+  background-color: white;
+  height: 500px;
+  width: 70%;
+  margin-top: 50px;
+  border-radius: 20px;
+  opacity: 95%;
+}
+
+table th{
+   text-align: center;
+}
+
+body a{
+  color: black;
+}
+
+body a:hover{
+  color: #818181;
+}
+
+.post{
+  padding: 10px 0 0 15px;
+  color: #474242;
+}
+
+.post p{
+  margin-top: 16px;
+}
+
+.date{
+  color: rgb(147,112,219);
+  font-size: 15px;
+  padding-top: 10px;
+  font-weight: 550;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the navbar (less padding and a smaller font size) */
 /* @media screen and (max-height: 450px) {
   .navbar {padding-top: 15px;}
