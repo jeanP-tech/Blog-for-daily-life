@@ -45,6 +45,13 @@ INSTALLED_APPS = [
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_IMAGE_BACKEND = "pillow"
 
+CKEDITOR_CONFIGS = {
+'default': {
+    'width': 'auto',
+    'enterMode': 2,
+          },
+    }
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
