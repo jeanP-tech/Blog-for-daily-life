@@ -57,11 +57,34 @@ body{
 
 .container{
   background-color: white;
-  height: 500px;
   width: 70%;
-  margin-top: 50px;
+  margin-top: 30px;
+  padding: 30px;
   border-radius: 20px;
   opacity: 95%;
+}
+
+#mainContainer{
+  height: 500px;
+}
+
+.newPostText{
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(147,112,219);
+}
+
+.newButton, .editButton, .saveButton{
+  float: right;
+  background-color: rgb(147,112,219);
+  color: #ffffff;
+  border-radius: 5px;
+  width: 60px;
+  border: none;
+}
+
+.postNewButton:hover {
+  filter: brightness(90%);
 }
 
 table th{
@@ -77,7 +100,7 @@ body a:hover{
 }
 
 .post{
-  padding: 10px 0 0 15px;
+  padding-left: 15px;
   color: #474242;
 }
 
@@ -85,12 +108,19 @@ body a:hover{
   margin-top: 16px;
 }
 
+.post h1{
+  margin: 20px 0 20px 0;
+}
+
 .date{
   color: rgb(147,112,219);
   font-size: 15px;
-  padding-top: 10px;
   font-weight: 550;
 }
+
+/* background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+
 
 /* On smaller screens, where height is less than 450px, change the style of the navbar (less padding and a smaller font size) */
 /* @media screen and (max-height: 450px) {
