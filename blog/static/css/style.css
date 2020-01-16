@@ -2,7 +2,10 @@ body{
   background-image: url(../images/space.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navbar {
@@ -56,12 +59,11 @@ body{
 }
 
 .container{
-  background-color: white;
   width: 70%;
   margin-top: 30px;
   padding: 30px 30px 20px 30px;
   border-radius: 20px;
-  opacity: 95%;
+  background: rgba(255,255,255,0.95);
 }
 
 .container:after {
@@ -80,16 +82,27 @@ body{
   color: rgb(147,112,219);
 }
 
-.newButton, .editButton, .saveButton{
+.pagination{
+  display: block;
+  text-align: center;
+}
+
+.currentPageNum{
+  margin: 0 15px;
+}
+
+.blogButton{
   float: right;
   background-color: rgb(147,112,219);
   color: #ffffff;
   border-radius: 5px;
-  width: 60px;
+  width: 75px;
+  height: 35px;
   border: none;
+  font-size: 15px;
 }
 
-.postNewButton:hover {
+.blogButton:hover {
   filter: brightness(90%);
 }
 
@@ -124,9 +137,60 @@ body a:hover{
   font-weight: 550;
 }
 
-/* background-color: #8EC5FC;
-background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+#canvas{
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
 
+.controls{
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls .controls_btns{
+  margin-bottom: 30px;
+}
+
+.controls_btns button{
+  all: unset;
+  cursor: pointer;
+  background-color: white;
+  padding: 5px 0px;
+  width: 80px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.controls_btns button:active {
+    transform: scale(0.98);
+}
+
+.controls .controls_colors{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.controls_colors .color {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.controls .controls_range{
+    margin-bottom: 30px;
+}
 
 /* On smaller screens, where height is less than 450px, change the style of the navbar (less padding and a smaller font size) */
 /* @media screen and (max-height: 450px) {

@@ -2,13 +2,17 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Post
 from .forms import PostForm
+from django.core.paginator import Paginator
 
 def index(request):
     return render(request, 'blog/index.html', {})
 
 def post_list(request):
-    posts = Post.objects.order_by('-created_date')
-    return render(request, 'blog/post.html', {'posts':posts})
+    post_list = Post.objects.order_by('-created_date')
+    paginator = Paginator(post_list, 10)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'blog/post.html', {'post_list':post_list, 'page_obj':page_obj})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -40,3 +44,9 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def art_list(request):
+    return render(request, 'blog/art.html', {})
+
+def paint(request):
+    return render(request, 'blog/paint.html')

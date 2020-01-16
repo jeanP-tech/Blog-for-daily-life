@@ -9,6 +9,6 @@
     <h1>{{ post.title }}</h1>
     <p>{{ post.text }}</p>
   </div>
-  <button class="editButton" onclick = "location.href='{% url 'post_edit' pk=post.pk %}'">Edit</button>
+  <button class="blogButton" onclick = "location.href='{% url 'post_edit' pk=post.pk %}'">Edit</button>
 </div>
 {% endblock %}

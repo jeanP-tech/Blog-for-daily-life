@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      {% for post in posts %}
+      {% for post in page_obj %}
         <tr>
           <th scope="row"> {{ post.id }} </th>
           <td><a href="{% url 'post_detail' pk=post.pk %}"> {{ post.title }} </td>
@@ -20,6 +20,20 @@
       {% endfor %}
     </tbody>
   </table>
-  <button class="newButton" onclick = "location.href='{% url 'post_new' %}'">new</button>
+
+  <div class="pagination">
+      {% if page_obj.has_previous %}
+          <a href="?page={{ page_obj.previous_page_number }}"> &laquo; </a>
+      {% else %} &laquo;
+      {% endif %}
+
+      <span class="currentPageNum">{{ page_obj.number }}</span>
+
+      {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}"> &raquo; </a>
+      {% else %} &raquo;
+      {% endif %}
+  </div>
+  <button class="blogButton" onclick = "location.href='{% url 'post_new' %}'">New</button>
 </div>
 {% endblock %}
