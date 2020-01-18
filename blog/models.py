@@ -17,4 +17,4 @@ class Post(models.Model):
 
 class Paint(models.Model):
     title = models.CharField(max_length=200)
-    paint = models.ImageField(blank=True)
+    paint = models.CharField(max_length=200)

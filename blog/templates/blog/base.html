@@ -12,6 +12,19 @@
         <script src="{% static 'js/paintApp.js' %}" type="text/javascript" async></script>
     </head>
     <body>
+      <div class="page-header">
+          {% if user.is_authenticated %}
+              <div class="top-menu">
+                  <a href="{% url 'logout' %}" class="topButton">Log out</a>
+                  <span class="topButton" style="color: rgb(147,112,219)">Hello {{ user.username }}!</span>
+              </div>
+          {% else %}
+              <div class="top-menu">
+                <a href="{% url 'signup' %}" class="topButton">Sign up</a>
+                <a href="{% url 'login' %}" class="topButton">Log in</a>
+              </div>
+          {% endif %}
+      </div>
       <span class="navbar-toggle" id="js-navbar-toggle">
           <i class="fas fa-bars"></i>
       </span>

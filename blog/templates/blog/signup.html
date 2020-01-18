@@ -1,0 +1,42 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<!-- <div class="container">
+    <form method="POST" action="{% url 'signup' %}">
+        {% csrf_token %}
+        Username:
+        <input name="username" type="text">
+        <br>
+        Password:
+        <input name="password1" type="password">
+        <br>
+        Password:
+        <input name="password2" type="password">
+        <br>
+        <input type="submit" class="blogButton" value="sign up">
+    </form>
+</div> -->
+<div class="login-page">
+  <div class="form">
+    <form method="POST" action="{% url 'signup' %}" class="register-form">
+      {% csrf_token %}
+      <input name="username" type="text" placeholder="name"/>
+      <input name="password1" type="password" placeholder="password"/>
+      <input name="password2" type="password" placeholder="confirm password"/>
+      <button type="submit" value="sign up"> create </button>
+      <p class="message">Already registered? <a href="{% url 'login' %}">Sign In</a></p>
+    </form>
+  </div>
+</div>
+{% endblock %}
+<!--
+<div class="login-page">
+  <div class="form">
+    <form method="POST" action="{% url 'signup' %}" class="register-form">
+      <input name="username" type="text" placeholder="name"/>
+      <input name="password1" type="password" placeholder="password"/>
+      <input name="password2" type="password" placeholder="password"/>
+      <button type="submit" value="sign up"> create </button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+  </div>
+</div> -->

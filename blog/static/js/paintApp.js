@@ -66,7 +66,7 @@ function handleCanvasClick(){
 }
 
 function handleSaveClick(){
-
+    const dataUrl = canvas.toDataURL();
 }
 
 if (canvas) {

@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<!-- <div class="container">
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        Username:
+        <input name="username" type="text">
+        <br>
+        Password:
+        <input name="password" type="password">
+        <br>
+        <br>
+        <input type="submit" class="blogButton" value="Log in">
+    </form>
+</div> -->
+<div class="login-page">
+  <div class="form">
+    <form method="POST" action="{% url 'login' %}" class="login-form">
+      {% csrf_token %}
+      <input name="username" type="text" placeholder="username"/>
+      <input name="password" type="password" placeholder="password"/>
+      <button type="submit" value="Log in">login</button>
+      <p class="message">Not registered? <a href="{% url 'signup' %}">Create an account</a></p>
+    </form>
+  </div>
+</div>
+{% endblock %}

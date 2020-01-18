@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post, Paint
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 class PostForm(forms.ModelForm):
@@ -19,9 +19,7 @@ class PostForm(forms.ModelForm):
         fields = ['title', 'text']
 
 
-        # widgets = {
-        #     'title': forms.TextInput(
-        #         attrs={'class': 'form-control', 'style': 'width: 100%', 'placeholder': 'Enter title here.'}
-        #     ),
-        #     'text': forms.CharField(widget=CKEditorUploadingWidget()),
-        # }
+class PaintForm(forms.ModelForm):
+
+    title = forms.CharField()
+    image = forms.CharField()

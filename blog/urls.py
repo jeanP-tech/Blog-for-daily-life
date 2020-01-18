@@ -10,4 +10,7 @@ urlpatterns = [
     path('art/', views.art_list, name='art'),
     path('paint/', views.paint, name='paint'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('signup/', views.signup, name='signup'),
+    path('login/', views.login, name='login'),
+    path('logout/', views.logout, name='logout'),
 ]
