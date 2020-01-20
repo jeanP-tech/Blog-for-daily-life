@@ -9,6 +9,10 @@
     <h1>{{ post.title }}</h1>
     <p>{{ post.text }}</p>
   </div>
-  <button class="blogButton" onclick = "location.href='{% url 'post_edit' pk=post.pk %}'">Edit</button>
+  {% if user.is_authenticated %}
+    <button class="blogButton" onclick = "location.href='{% url 'post_edit' pk=post.pk %}'">Edit</button>
+  {% else %}
+    <button class="blogButton" style="display:none"> </button>
+  {% endif %}
 </div>
 {% endblock %}

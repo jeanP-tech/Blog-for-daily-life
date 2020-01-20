@@ -1,7 +1,7 @@
 body{
   background-image: url(../images/space.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   font-family: 'Nanum Gothic', sans-serif;
   display: flex;
   flex-direction: column;
@@ -15,13 +15,11 @@ body{
   top: 0;
   left: 0;
   background-color: #111 !important;
-  /* overflow-x: hidden; */
   padding-top: 80px;
   transition: 0.5s;
   display: none;
 }
 
-/* The navigation menu links */
 .navbar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -31,7 +29,6 @@ body{
   font-size: 25px;
 }
 
-/* When you mouse over the navigation links, change their color */
 .navbar a:hover {
   color: #f1f1f1;
 }
@@ -62,16 +59,13 @@ body{
   padding: 30px 30px 20px 30px;
   border-radius: 20px;
   background: rgba(255,255,255,0.95);
+  margin-top: 30px;
 }
 
 .container:after {
   content:'';
   display:block;
   clear:both;
-}
-
-#mainContainer{
-  height: 500px;
 }
 
 .newPostText{
@@ -258,9 +252,7 @@ body a:hover{
   color: rgb(147,112,219);
   text-decoration: none;
 }
-/* .form .register-form {
-  display: none;
-} */
+
 /* On smaller screens, where height is less than 450px, change the style of the navbar (less padding and a smaller font size) */
 /* @media screen and (max-height: 450px) {
   .navbar {padding-top: 15px;}
