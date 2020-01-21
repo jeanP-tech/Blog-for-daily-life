@@ -8,13 +8,12 @@ class Post(models.Model):
     text = RichTextField()
     created_date = models.DateTimeField(default=timezone.now)
 
+    class Meta:
+        permissions = (("can_post", "can post"),)
+
     def publish(self):
         self.published_date = timezone.now()
         self.save()
 
     def __str__(self):
         return self.title
-
-class Paint(models.Model):
-    title = models.CharField(max_length=200)
-    paint = models.CharField(max_length=200)

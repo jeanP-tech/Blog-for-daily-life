@@ -9,7 +9,7 @@
     <h1>{{ post.title }}</h1>
     <p>{{ post.text }}</p>
   </div>
-  {% if user.is_authenticated %}
+  {% if request.user.is_staff %}
     <button class="blogButton" onclick = "location.href='{% url 'post_edit' pk=post.pk %}'">Edit</button>
   {% else %}
     <button class="blogButton" style="display:none"> </button>

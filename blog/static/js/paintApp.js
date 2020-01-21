@@ -66,7 +66,11 @@ function handleCanvasClick(){
 }
 
 function handleSaveClick(){
-    const dataUrl = canvas.toDataURL();
+    const image = canvas.toDataURL();
+    const link = document.createElement("a");
+    link.href = image;
+    link.download = "Artwork";
+    link.click();
 }
 
 if (canvas) {

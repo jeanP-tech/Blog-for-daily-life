@@ -34,7 +34,7 @@
       {% else %} &raquo;
       {% endif %}
   </div>
-  {% if user.is_authenticated %}
+  {% if request.user.is_staff %}
     <button class="blogButton" onclick = "location.href='{% url 'post_new' %}'">New</button>
   {% else %}
     <button class="blogButton" style="display:none"> </button>

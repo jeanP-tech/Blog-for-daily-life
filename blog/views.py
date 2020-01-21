@@ -4,6 +4,9 @@ from .models import Post
 from .forms import PostForm
 from django.core.paginator import Paginator
 from django.contrib.auth.models import User
+from io import BytesIO
+from PIL import Image
+import re
 
 from django.contrib import auth
 
@@ -48,10 +51,7 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
-def art_list(request):
-    return render(request, 'blog/art.html', {})
-
-def paint(request):
+def art(request):
     return render(request, 'blog/paint.html')
 
 def signup(request):
