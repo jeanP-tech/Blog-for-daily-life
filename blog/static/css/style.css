@@ -5,6 +5,27 @@ body{
   font-family: 'Nanum Gothic', sans-serif;
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+#indexCat{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#indexCat a{
+  max-width: 50%;
+}
+
+#indexCat a:active{
+  transform: scale(1.1);
+}
+
+#indexCat img{
+  max-width: 100%;
 }
 
 .navbar {
