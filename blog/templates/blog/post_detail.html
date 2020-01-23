@@ -2,12 +2,13 @@
 
 {% block content %}
 <div class="container">
+  {{ form.media }}
   <div class="post">
       <div class="date">
           {{ post.created_date }}
       </div>
     <h1>{{ post.title }}</h1>
-    <p>{{ post.text }}</p>
+    <p>{{ post.text|safe }}</p>
   </div>
   {% if request.user.is_staff %}
     <button class="blogButton" onclick = "location.href='{% url 'post_edit' pk=post.pk %}'">Edit</button>

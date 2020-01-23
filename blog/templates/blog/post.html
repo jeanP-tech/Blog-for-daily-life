@@ -13,8 +13,16 @@
     <tbody>
       {% for post in page_obj %}
         <tr>
-          <th scope="row"> {{ post.id }} </th>
-          <td><a href="{% url 'post_detail' pk=post.pk %}"> {{ post.title }} </td>
+          <th scope="row"> {{ post.postId }} </th>
+          {% if post.secret == True %}
+              {% if request.user.is_staff %}
+                <td><a href="{% url 'post_detail' pk=post.pk %}"> {{ post.title }} </td>
+              {% else %}
+                <td><a href="{% url 'reject' %}"> {{ post.title }} </td>
+              {% endif %}
+          {% elif post.secret == False %}
+              <td><a href="{% url 'post_detail' pk=post.pk %}"> {{ post.title }} </td>
+          {% endif %}
           <td style="text-align: center">{{ post.created_date|date:"M d Y" }}</td>
         </tr>
       {% endfor %}

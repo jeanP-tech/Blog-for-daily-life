@@ -1,18 +1,5 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-<!-- <div class="container">
-    <form method="POST" action="{% url 'login' %}">
-        {% csrf_token %}
-        Username:
-        <input name="username" type="text">
-        <br>
-        Password:
-        <input name="password" type="password">
-        <br>
-        <br>
-        <input type="submit" class="blogButton" value="Log in">
-    </form>
-</div> -->
 <div class="login-page">
   <div class="form">
     <form method="POST" action="{% url 'login' %}" class="login-form">

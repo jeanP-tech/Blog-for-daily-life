@@ -14,6 +14,13 @@ class PostForm(forms.ModelForm):
         label=''
         )
 
+    secret = forms.BooleanField(
+        widget=forms.CheckboxInput(),
+        label='',
+        help_text='secret',
+        required='False'
+    )
+
     class Meta:
         model = Post
         fields = ['title', 'text']
