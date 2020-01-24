@@ -6,6 +6,7 @@ from django.core.paginator import Paginator
 from django.contrib.auth.models import User
 from io import BytesIO
 from PIL import Image
+from django.http import HttpResponseRedirect
 import re
 
 from django.contrib import auth
@@ -84,4 +85,4 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('index')
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
