@@ -1,0 +1,282 @@
+body{
+  background-image: url(../images/space.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  font-family: 'Nanum Gothic', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#indexCat{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#indexCat a{
+  max-width: 50%;
+}
+
+#indexCat a:active{
+  transform: scale(1.1);
+}
+
+#indexCat img{
+  max-width: 100%;
+}
+
+.navbar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111 !important;
+  padding-top: 80px;
+  transition: 0.5s;
+  display: none;
+}
+
+.navbar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-size: 25px;
+}
+
+.navbar a:hover {
+  color: #f1f1f1;
+}
+
+.navbar #closebtn {
+  position: absolute;
+  top: 0;
+  left: 120px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+}
+
+.active {
+    display: block;
+}
+
+.container{
+  width: 70%;
+  padding: 30px 30px 20px 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.95);
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.container:after {
+  content:'';
+  display:block;
+  clear:both;
+}
+
+.newPostText{
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(147,112,219);
+}
+
+.pagination{
+  display: block;
+  text-align: center;
+}
+
+.currentPageNum{
+  margin: 0 15px;
+}
+
+.blogButton{
+  float: right;
+  background-color: rgb(147,112,219);
+  color: #ffffff;
+  border-radius: 5px;
+  width: 75px;
+  height: 35px;
+  border: none;
+  font-size: 15px;
+}
+
+.blogButton:hover {
+  filter: brightness(90%);
+}
+
+table th{
+   text-align: center;
+}
+
+body a{
+  color: black;
+}
+
+body a:hover{
+  color: #818181;
+}
+
+.post{
+  padding-left: 15px;
+  color: #474242;
+}
+
+.post p{
+  margin-top: 16px;
+}
+
+.post h1{
+  margin: 20px 0 20px 0;
+}
+
+.date{
+  color: rgb(147,112,219);
+  font-size: 15px;
+  font-weight: 550;
+}
+
+#canvas-container{
+  width: 100%;
+  text-align:center;
+  margin-top: 30px;
+}
+
+#canvas{
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: inline;
+}
+
+.controls{
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls .controls_btns{
+  margin-bottom: 30px;
+}
+
+.controls_btns button{
+  all: unset;
+  cursor: pointer;
+  background-color: white;
+  padding: 5px 0px;
+  width: 80px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.controls_btns button:active {
+    transform: scale(0.98);
+}
+
+.controls .controls_colors{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.controls_colors .color {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.controls .controls_range{
+    margin-bottom: 30px;
+}
+
+.top-menu{
+  margin-top: 15px;
+}
+
+.topButton{
+  color: rgba(255,255,255,0.8);
+  margin-right: 15px;
+  float: right;
+}
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(147,112,219);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: rgb(147,112,219, 0.9);
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: rgb(147,112,219);
+  text-decoration: none;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the navbar (less padding and a smaller font size) */
+/* @media screen and (max-height: 450px) {
+  .navbar {padding-top: 15px;}
+  .navbar a {font-size: 18px;}
+} */
