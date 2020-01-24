@@ -5,7 +5,6 @@ from .forms import PostForm
 from django.core.paginator import Paginator
 from django.contrib.auth.models import User
 from io import BytesIO
-from PIL import Image
 from django.http import HttpResponseRedirect
 import re
 
